@@ -8,7 +8,9 @@ function reset_color_if_not_VIM {
 	node_name=$(xtitle $node_id)
 
 
+	bspc config border_width 1
 	if [[ $node_name != *"ᴠɪᴍ"* ]]; then
+		bspc config border_width 0
 		$SCRIPTPATH/reset $2
 	fi
 }

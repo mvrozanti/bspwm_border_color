@@ -5,5 +5,6 @@ SCRIPTPATH="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 #Only start listener if it isn't already running
 if ! ps -ef | grep ".*bash.*bspwm_border_listener" | grep -v "grep" > /dev/null
 then
+	bspc config border_width 1
 	$SCRIPTPATH/bspwm_border_listener $1 & disown
 fi

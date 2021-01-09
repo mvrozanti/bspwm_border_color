@@ -1,6 +1,8 @@
 #!/bin/bash
 
 #this script is called by the autocmd events in ~/.vimrc
+
+bspc config border_width 1
 if [ $1 = "i" ]; then
 	bspc config focused_border_color ${BSPWM_VIM_INSERT:-'#e21855'} #red
 else
